@@ -18,23 +18,36 @@ Second method:    Write another  method called printConversion with 1 parameter 
 /*****************************************************CODE*********************************************************************************************
 
 public class SpeedConverter {
-  
-  public static long toMilesPerHour (double kilometersPerHour) {
+    // write your code h    
+    public static long toMilesPerHour (double kilometersPerHour) {
     
-    if (kilometersPerHour < 0) {
-      return -1;
+        if (kilometersPerHour < 0) {
+            return -1;
+        }
+    
+        else{
+            return Math.round(kilometersPerHour / 1.609);
+        }
+        
     }
-    return Math.round(kilometersPerHou / 1.609);
-  }
   
-  public static void printConversion (double kilometersPerHour) {
+    public static void printConversion (double kilometersPerHour) {
   
-    if (kilometersPerHour < 0) {
-      System.out.println("Invalid Value");
-    }
+        if (kilometersPerHour < 0) {
+      
+        System.out.println("Invalid Value");
+    
+        
+        }
+    
     else {
-      long milesPerHour = toMilesPerHour(kilometersPerHour);
-      System.out.println(kilometersPerHour + " km/h = " + milesPerHour + " mi/h");
-  }
- }
+        
+        long milesPerHour = toMilesPerHour(kilometersPerHour);
+        
+        System.out.println(kilometersPerHour + " km/h = " + milesPerHour + " mi/h");
+    
+        
+        }
+    }
+    
 }
