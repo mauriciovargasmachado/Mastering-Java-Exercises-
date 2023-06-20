@@ -22,24 +22,24 @@ public class LastDigitChecker {
   
   }
   
-  public static boolean hasSameLastDigit(int fDigit, int sDigit, int lDigit) {
-  
-    if((isValid(fDigit) && isValid(sDigit) && isValid(lDigit))) {
-    
-      if((fDigit % 10 == sDigit % 10 || (sDigit % 10 == lDigit % 10 == fDigit % 10))) {
-      
-        return true;
-      
-      }
-    
+   public static boolean hasSameLastDigit(int fDigit, int sDigit, int tDigit) {
+
+        if((isValid(fDigit) && isValid(sDigit) && isValid(tDigit))) {
+
+            if(fDigit % 10 == sDigit % 10 || sDigit % 10 == tDigit % 10 || fDigit % 10== tDigit % 10) {
+
+                return true;
+
+            }
+
+        }
+        return false;
+
     }
-    return false;
-  
-  }
-  public static boolean isValid(int number) {
-  
-    return(number >= 10 && number <= 1000));
-  
-  }
+    public static boolean isValid(int number) {
+
+        return(number >= 10 && number <= 1000);
+
+    }
 
 }
